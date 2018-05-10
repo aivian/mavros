@@ -79,7 +79,7 @@ private:
                 for (uint8_t idx=0; idx<253; idx++) {
                     avia_msg.data.push_back(avia_packet.data[idx]);
                 } 
-		//dv_msg->header.stamp = m_uas->synchronise_stamp(debug.time_boot_ms);
+		avia_msg->header.stamp = ros::Time::now();
 
 		avia_link_pub.publish(avia_msg);
 	}
