@@ -1,11 +1,25 @@
 plugin_blacklist:
 # common
 - safety_area
+- local_position
+- setpoint_position
+- ftp
 # extras
 - image_pub
 - vibration
 - distance_sensor
 - rangefinder
+- adsb
+- cam_imu_sync
+- debug_value
+- distance_sensor
+- fake_gps
+- mocap_pose_estimate
+- obstacle_distance
+- odom
+- px4flow
+- rangefinder
+- vision_speed_estimate
 
 plugin_whitelist: []
 # 'sys_*'
