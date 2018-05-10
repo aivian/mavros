@@ -34,10 +34,10 @@ public:
 
 		// subscribers
                 avia_link_sub = avia_link_nh.subscribe(
-                    "avia/to", 10, &AviaLinkPlugin::avia_link_cb, this);
+                    "to", 10, &AviaLinkPlugin::avia_link_cb, this);
                 
                 // publishers
-                avia_link_pub = avia_link_nh.advertise<robots_common::UInt8ArrayStamped>("avia/from", 10);
+                avia_link_pub = avia_link_nh.advertise<robots_common::UInt8ArrayStamped>("from", 10);
 
 	}
 
