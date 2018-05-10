@@ -12,6 +12,7 @@ find_package(catkin REQUIRED COMPONENTS
   geometry_msgs
   std_msgs
   visualization_msgs
+  robots_common
   urdf
   tf
 )
@@ -50,7 +51,7 @@ include(MavrosMavlink)
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES
-  CATKIN_DEPENDS mavros mavros_msgs roscpp sensor_msgs geometry_msgs
+  CATKIN_DEPENDS mavros mavros_msgs roscpp sensor_msgs geometry_msgs robots_common
   DEPENDS Boost
 )
 
@@ -74,7 +75,7 @@ add_library(mavros_extras
   src/plugins/odom.cpp
   src/plugins/px4flow.cpp
   src/plugins/rangefinder.cpp
-  src/plugins/trajectory.cpp
+  src/plugins/avia_link.cpp
   src/plugins/vibration.cpp
   src/plugins/vision_pose_estimate.cpp
   src/plugins/vision_speed_estimate.cpp
