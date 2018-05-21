@@ -64,6 +64,8 @@ private:
 		mavlink::common::msg::ENCAPSULATED_DATA msg {};
 
                 msg.seqnr = 0;
+                msg.target_system = 0;
+                msg.target_component = 0;
                 for (uint8_t idx=0; idx<avia_packet->data.size(); idx++) {
                     msg.data[idx] = avia_packet->data[idx];
                 }
